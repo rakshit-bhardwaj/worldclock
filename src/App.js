@@ -46,7 +46,7 @@ function App() {
     }, [])
 
     return (
-      <section>
+      <section className='mainsection'>
         <div className="App">
           <div className="clockcontainer">
             <div id="hour" className="hour" style={{ transform: `rotate(${hrot}deg)` }} ></div>
@@ -58,6 +58,7 @@ function App() {
         <div className='digitaltime'>
           <p>{hours} : {minutes} : {seconds} {amorpm}</p>
         </div>
+        <Timezoneinput />
       </section>
     );
   }
@@ -83,7 +84,7 @@ const Timezoneinput = () => {
   return (
     <>
     <Clockrender/>
-    <Timezoneinput/>
+    
     </>);
 }
 
